@@ -7,7 +7,7 @@ class IntervalUnit(object):
         self.unit_format = unit_format
 
     def format(self, values):
-        return self.unit_format.format(values) + " " + self.unit_name
+        return self.unit_format.format(**values) + " " + self.unit_name
 
 class Interval(sa.sql.expression.Function):
     """
